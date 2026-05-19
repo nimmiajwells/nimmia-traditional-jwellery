@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
   <title>Traditional Rings Collection | Nimmia Traditional Jewellery</title>
 
   <meta
     name="description"
-    content="Explore beautiful traditional rings from Nimmia Traditional Jewellery. Discover handcrafted ethnic and bridal ring collections."
+    content="Explore handcrafted traditional rings from Nimmia Traditional Jewellery. Elegant ethnic, bridal, and designer ring collections."
   />
 
   <meta
     name="keywords"
-    content="traditional rings, indian jewellery, gold rings, bridal rings, ethnic jewellery, handmade rings"
+    content="traditional rings, bridal rings, indian jewellery, gold rings, ethnic jewellery, designer rings"
   />
 
   <meta name="author" content="Nimmia Traditional Jewellery" />
@@ -41,6 +42,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
 
+  <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     defer
@@ -62,13 +64,13 @@
     .navbar-brand {
       font-size: 30px;
       font-weight: bold;
-      color: white;
+      color: white !important;
     }
 
     .nav-link,
     .dropdown-item {
-      font-size: 18px;
       color: white !important;
+      font-size: 18px;
     }
 
     .nav-link:hover,
@@ -76,11 +78,16 @@
       color: black !important;
     }
 
+    /* Dropdown */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
     /* Cart */
     .fa-cart-shopping {
       font-size: 24px;
       position: relative;
-      color: white;
     }
 
     #cart-count {
@@ -96,12 +103,6 @@
       font-weight: bold;
     }
 
-    /* Dropdown */
-    .dropdown:hover .dropdown-menu {
-      display: block;
-      margin-top: 0;
-    }
-
     /* Main */
     .main {
       text-align: center;
@@ -110,40 +111,52 @@
 
     h1 {
       text-align: center;
-      padding: 20px 0;
       font-weight: bold;
+      margin: 20px 0;
     }
 
     .description {
       max-width: 900px;
       margin: auto;
       text-align: center;
-      padding: 10px 20px 30px;
       color: #222;
+      padding: 10px 20px 30px;
     }
 
     /* Gallery */
     .gallery {
       display: inline-block;
-      width: 300px;
-      margin: 20px;
+      margin: 25px;
       border: 1px solid black;
+      width: 300px;
       box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
-      background-color: white;
       vertical-align: top;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .gallery:hover {
+      transform: translateY(-5px);
     }
 
     .gallery img {
       width: 100%;
       height: 400px;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
 
     .price {
       background-color: goldenrod;
-      padding: 10px;
-      font-weight: bold;
+      padding: 12px;
       font-size: 18px;
+      font-weight: bold;
       margin: 0;
     }
 
@@ -155,7 +168,7 @@
       color: white;
       font-size: 18px;
       font-weight: bold;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .gallery button:hover {
@@ -172,7 +185,6 @@
       border: none;
       padding: 10px 15px;
       border-radius: 50px;
-      font-size: 14px;
       z-index: 1000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
@@ -180,6 +192,18 @@
     /* Footer */
     footer {
       background-color: #8b5c29;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .gallery {
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .gallery img {
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -251,208 +275,232 @@
     <i class="fa fa-arrow-left"></i> Back
   </button>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="main">
 
     <h1>Traditional Rings Collection</h1>
 
     <p class="description">
-      Traditional rings symbolize love, culture, and heritage. Explore our handcrafted ethnic ring collection inspired by timeless Indian artistry.
+      Traditional rings symbolize love, heritage, and culture. Explore elegant handcrafted ring collections inspired by timeless Indian artistry.
     </p>
 
-    <!-- Ring Collection Images -->
+    <!-- Ring 1 -->
+    <div class="gallery">
+      <img
+        src="ri1.jpg"
+        alt="Traditional Gold Ring Design"
+        loading="lazy"
+      />
 
-<div class="gallery">
-  <img
-    src="ri1.jpg"
-    alt="Traditional Gold Ring Design"
-    loading="lazy"
-  />
-  <p class="price">₹2850</p>
+      <p class="price">₹2850</p>
 
-  <button
-    aria-label="Add Traditional Gold Ring to Cart"
-    onclick="addToCart('Traditional Ring 1', 2850, 'ri1.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <button
+        aria-label="Add Traditional Gold Ring to Cart"
+        onclick="addToCart('Traditional Ring 1', 2850, 'ri1.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-<div class="gallery">
-  <img
-    src="ri2.jpg"
-    alt="Handcrafted Bridal Ring"
-    loading="lazy"
-  />
-  <p class="price">₹2550</p>
+    <!-- Ring 2 -->
+    <div class="gallery">
+      <img
+        src="ri2.jpg"
+        alt="Elegant Bridal Ring"
+        loading="lazy"
+      />
 
-  <button
-    aria-label="Add Handcrafted Bridal Ring to Cart"
-    onclick="addToCart('Traditional Ring 2', 2550, 'ri2.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <p class="price">₹2550</p>
 
-<div class="gallery">
-  <img
-    src="ri3.jpg"
-    alt="Elegant Indian Traditional Ring"
-    loading="lazy"
-  />
-  <p class="price">₹1600</p>
+      <button
+        aria-label="Add Elegant Bridal Ring to Cart"
+        onclick="addToCart('Traditional Ring 2', 2550, 'ri2.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-  <button
-    aria-label="Add Elegant Indian Ring to Cart"
-    onclick="addToCart('Traditional Ring 3', 1600, 'ri3.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+    <!-- Ring 3 -->
+    <div class="gallery">
+      <img
+        src="ri3.jpg"
+        alt="Indian Designer Ring"
+        loading="lazy"
+      />
 
-<div class="gallery">
-  <img
-    src="ri4.jpg"
-    alt="Designer Traditional Ring for Women"
-    loading="lazy"
-  />
-  <p class="price">₹1800</p>
+      <p class="price">₹1600</p>
 
-  <button
-    aria-label="Add Designer Traditional Ring to Cart"
-    onclick="addToCart('Traditional Ring 4', 1800, 'ri4.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <button
+        aria-label="Add Indian Designer Ring to Cart"
+        onclick="addToCart('Traditional Ring 3', 1600, 'ri3.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-<div class="gallery">
-  <img
-    src="ri5.jpg"
-    alt="Classic Gold Ethnic Ring"
-    loading="lazy"
-  />
-  <p class="price">₹2500</p>
+    <!-- Ring 4 -->
+    <div class="gallery">
+      <img
+        src="ri4.jpg"
+        alt="Traditional Ethnic Ring"
+        loading="lazy"
+      />
 
-  <button
-    aria-label="Add Classic Gold Ring to Cart"
-    onclick="addToCart('Traditional Ring 5', 2500, 'ri5.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <p class="price">₹1800</p>
 
-<div class="gallery">
-  <img
-    src="ri6.jpg"
-    alt="Traditional Antique Ring Design"
-    loading="lazy"
-  />
-  <p class="price">₹1750</p>
+      <button
+        aria-label="Add Traditional Ethnic Ring to Cart"
+        onclick="addToCart('Traditional Ring 4', 1800, 'ri4.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-  <button
-    aria-label="Add Antique Ring to Cart"
-    onclick="addToCart('Traditional Ring 6', 1750, 'ri6.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+    <!-- Ring 5 -->
+    <div class="gallery">
+      <img
+        src="ri5.jpg"
+        alt="Classic Gold Ring"
+        loading="lazy"
+      />
 
-<div class="gallery">
-  <img
-    src="ri7.jpg"
-    alt="Luxury Traditional Bridal Ring"
-    loading="lazy"
-  />
-  <p class="price">₹3500</p>
+      <p class="price">₹2500</p>
 
-  <button
-    aria-label="Add Luxury Bridal Ring to Cart"
-    onclick="addToCart('Traditional Ring 7', 3500, 'ri7.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <button
+        aria-label="Add Classic Gold Ring to Cart"
+        onclick="addToCart('Traditional Ring 5', 2500, 'ri5.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-<div class="gallery">
-  <img
-    src="ri8.jpg"
-    alt="Elegant Gold Ring for Women"
-    loading="lazy"
-  />
-  <p class="price">₹2500</p>
+    <!-- Ring 6 -->
+    <div class="gallery">
+      <img
+        src="ri6.jpg"
+        alt="Handcrafted Traditional Ring"
+        loading="lazy"
+      />
 
-  <button
-    aria-label="Add Elegant Gold Ring to Cart"
-    onclick="addToCart('Traditional Ring 8', 2500, 'ri8.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <p class="price">₹1750</p>
 
-<div class="gallery">
-  <img
-    src="ri9.jpg"
-    alt="Indian Cultural Ring Design"
-    loading="lazy"
-  />
-  <p class="price">₹3200</p>
+      <button
+        aria-label="Add Handcrafted Traditional Ring to Cart"
+        onclick="addToCart('Traditional Ring 6', 1750, 'ri6.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-  <button
-    aria-label="Add Cultural Ring to Cart"
-    onclick="addToCart('Traditional Ring 9', 3200, 'ri9.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+    <!-- Ring 7 -->
+    <div class="gallery">
+      <img
+        src="ri7.jpg"
+        alt="Luxury Bridal Ring"
+        loading="lazy"
+      />
 
-<div class="gallery">
-  <img
-    src="ri10.jpg"
-    alt="Premium Traditional Gold Ring"
-    loading="lazy"
-  />
-  <p class="price">₹4500</p>
+      <p class="price">₹3500</p>
 
-  <button
-    aria-label="Add Premium Gold Ring to Cart"
-    onclick="addToCart('Traditional Ring 10', 4500, 'ri10.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <button
+        aria-label="Add Luxury Bridal Ring to Cart"
+        onclick="addToCart('Traditional Ring 7', 3500, 'ri7.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-<div class="gallery">
-  <img
-    src="ri11.jpg"
-    alt="Beautiful Handmade Ring"
-    loading="lazy"
-  />
-  <p class="price">₹2500</p>
+    <!-- Ring 8 -->
+    <div class="gallery">
+      <img
+        src="ri8.jpg"
+        alt="Traditional Gold Jewellery Ring"
+        loading="lazy"
+      />
 
-  <button
-    aria-label="Add Handmade Ring to Cart"
-    onclick="addToCart('Traditional Ring 11', 2500, 'ri11.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+      <p class="price">₹2500</p>
 
-<div class="gallery">
-  <img
-    src="ri12.jpg"
-    alt="Royal Traditional Ring Collection"
-    loading="lazy"
-  />
-  <p class="price">₹3500</p>
+      <button
+        aria-label="Add Traditional Gold Jewellery Ring to Cart"
+        onclick="addToCart('Traditional Ring 8', 2500, 'ri8.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
 
-  <button
-    aria-label="Add Royal Traditional Ring to Cart"
-    onclick="addToCart('Traditional Ring 12', 3500, 'ri12.jpg')"
-  >
-    Add to Cart
-  </button>
-</div>
+    <!-- Ring 9 -->
+    <div class="gallery">
+      <img
+        src="ri9.jpg"
+        alt="Elegant Cultural Ring"
+        loading="lazy"
+      />
+
+      <p class="price">₹3200</p>
+
+      <button
+        aria-label="Add Elegant Cultural Ring to Cart"
+        onclick="addToCart('Traditional Ring 9', 3200, 'ri9.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Ring 10 -->
+    <div class="gallery">
+      <img
+        src="ri10.jpg"
+        alt="Premium Traditional Ring"
+        loading="lazy"
+      />
+
+      <p class="price">₹4500</p>
+
+      <button
+        aria-label="Add Premium Traditional Ring to Cart"
+        onclick="addToCart('Traditional Ring 10', 4500, 'ri10.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Ring 11 -->
+    <div class="gallery">
+      <img
+        src="ri11.jpg"
+        alt="Beautiful Handmade Ring"
+        loading="lazy"
+      />
+
+      <p class="price">₹2500</p>
+
+      <button
+        aria-label="Add Beautiful Handmade Ring to Cart"
+        onclick="addToCart('Traditional Ring 11', 2500, 'ri11.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Ring 12 -->
+    <div class="gallery">
+      <img
+        src="ri12.jpg"
+        alt="Royal Traditional Ring Collection"
+        loading="lazy"
+      />
+
+      <p class="price">₹3500</p>
+
+      <button
+        aria-label="Add Royal Traditional Ring Collection to Cart"
+        onclick="addToCart('Traditional Ring 12', 3500, 'ri12.jpg')"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+  </main>
 
   <!-- Footer -->
   <footer class="text-white pt-5 pb-3">
@@ -467,7 +515,7 @@
           </h5>
 
           <p class="small">
-            Timeless traditional jewellery crafted with elegance and heritage.
+            Embrace elegance with handcrafted traditional jewellery inspired by timeless cultural beauty.
           </p>
         </div>
 
@@ -483,7 +531,7 @@
         </div>
 
         <div class="col-md-3 mb-4">
-          <h6 class="fw-bold text-uppercase">Contact</h6>
+          <h6 class="fw-bold text-uppercase">Contact Us</h6>
 
           <ul class="list-unstyled small">
             <li><i class="fas fa-envelope me-2"></i> info@nimmiajewels.com</li>
@@ -494,7 +542,7 @@
 
       </div>
 
-      <hr class="text-white opacity-50">
+      <hr class="text-white opacity-50" />
 
       <div class="text-center small">
         © 2025 Nimmia Traditional Jewellery. All Rights Reserved.
@@ -543,13 +591,13 @@
 
   </script>
 
-  <!-- Structured Data -->
+  <!-- SEO Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Store",
     "name": "Nimmia Traditional Jewellery",
-    "description": "Traditional handcrafted jewellery collection including rings, necklaces, and earrings.",
+    "description": "Traditional handcrafted jewellery including rings, earrings, and necklaces.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hyderabad",
