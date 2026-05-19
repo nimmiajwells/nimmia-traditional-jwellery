@@ -43,82 +43,58 @@
     }
 
    .gallery {
-  display: inline-block;
-  width: 300px;
-  margin: 20px;
-  border: 1px solid black;
-  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
-  background-color: white;
-  vertical-align: top;
-  border-radius: 10px;
-  overflow: hidden;
+      display: inline-block;
+      width: 300px;
+      margin: 20px;
+      border: 1px solid black;
+      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
+      background-color: white;
+      vertical-align: top;
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-  /* ✅ HOVER SMOOTH EFFECT */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
+    .gallery img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
 
-/* ✅ CARD HOVER */
-.gallery:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-}
+    .price {
+      background-color: goldenrod;
+      padding: 10px;
+      font-weight: bold;
+      margin: 0;
+    }
 
-/* IMAGE */
-.gallery img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+    .gallery button {
+      width: 100%;
+      border: none;
+      padding: 15px;
+      background-color: #8b5c29;
+      color: white;
+      font-weight: bold;
+    }
 
-  /* ✅ IMAGE SMOOTH ZOOM */
-  transition: transform 0.3s ease;
-}
-
-/* IMAGE HOVER */
-.gallery:hover img {
-  transform: scale(1.08);
-}
-
-/* PRICE */
-.price {
-  background-color: goldenrod;
-  padding: 10px;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* BUTTON */
-.gallery button {
-  width: 100%;
-  border: none;
-  padding: 15px;
-  background-color: #8b5c29;
-  color: white;
-  font-weight: bold;
-
-  /* smooth button animation */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-/* BUTTON HOVER */
-.gallery button:hover {
+ .gallery button:hover {
   background-color: black;
-  color: white;
+  color: white; /* optional but recommended */
 }
+    
 
-/* BACK BUTTON */
-.back-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #8b5c29;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50px;
-  z-index: 1000;
-}
+    /* BACK BUTTON */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #8b5c29;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      z-index: 1000;
+    }
+  </style>
 </head>
 
 <body>
