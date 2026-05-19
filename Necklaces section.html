@@ -68,6 +68,31 @@
 
     /* PRODUCT CARD (SAME AS RINGS STYLE) */
     .gallery {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.gallery img {
+  transition: transform 0.3s ease;
+}
+
+.gallery:hover img {
+  transform: scale(1.08);
+}
+
+.gallery button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery button:hover {
+  background-color: black;
+  color: white;
+}
+    .gallery {
       display: inline-block;
       width: 300px;
       margin: 20px;
