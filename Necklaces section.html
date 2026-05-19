@@ -13,7 +13,6 @@
     body {
       background-color: #d99f4d;
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
     }
 
@@ -49,7 +48,7 @@
       z-index: 1000;
     }
 
-    /* MAIN CENTER STYLE (LIKE RINGS) */
+    /* MAIN */
     .main {
       text-align: center;
       padding: 20px;
@@ -63,51 +62,39 @@
     .description {
       max-width: 900px;
       margin: auto;
-      padding: 10px 20px 30px;
+      padding-bottom: 20px;
     }
 
-    /* PRODUCT CARD (SAME AS RINGS STYLE) */
-    .gallery {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-.gallery img {
-  transition: transform 0.3s ease;
-}
-
-.gallery:hover img {
-  transform: scale(1.08);
-}
-
-.gallery button {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.gallery button:hover {
-  background-color: black;
-  color: white;
-}
+    /* CARD STYLE */
     .gallery {
       display: inline-block;
       width: 300px;
       margin: 20px;
-      border: 1px solid black;
-      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
       background-color: white;
-      vertical-align: top;
+      border: 1px solid black;
       border-radius: 10px;
       overflow: hidden;
+
+      /* smooth animation */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* HOVER EFFECT (CARD) */
+    .gallery:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.4);
     }
 
     .gallery img {
       width: 100%;
       height: 400px;
       object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* IMAGE ZOOM */
+    .gallery:hover img {
+      transform: scale(1.08);
     }
 
     .price {
@@ -125,8 +112,10 @@
       color: white;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
+    /* BUTTON HOVER */
     .gallery button:hover {
       background-color: black;
     }
@@ -148,7 +137,7 @@
   <i class="fa fa-arrow-left"></i> Back
 </button>
 
-<!-- MAIN -->
+<!-- MAIN CONTENT -->
 <div class="main">
 
   <h1>Necklace Collection</h1>
@@ -157,88 +146,52 @@
     Explore our heritage-inspired traditional necklaces crafted with elegance and cultural beauty.
   </p>
 
-  <!-- PRODUCTS (CENTER STYLE LIKE RINGS) -->
+  <!-- PRODUCTS -->
 
   <div class="gallery">
-    <img src="nek5.jpg" alt="Necklace 1">
+    <img src="nek5.jpg" alt="">
     <p class="price">₹2350</p>
     <button onclick="addToCart('Necklace 1',2350,'nek5.jpg')">Add to Cart</button>
   </div>
 
   <div class="gallery">
-    <img src="nek3.jpg" alt="Necklace 2">
+    <img src="nek3.jpg" alt="">
     <p class="price">₹3350</p>
     <button onclick="addToCart('Necklace 2',3350,'nek3.jpg')">Add to Cart</button>
   </div>
 
   <div class="gallery">
-    <img src="nek4.jpg" alt="Necklace 3">
+    <img src="nek4.jpg" alt="">
     <p class="price">₹2550</p>
     <button onclick="addToCart('Necklace 3',2550,'nek4.jpg')">Add to Cart</button>
   </div>
 
   <div class="gallery">
-    <img src="nek7.jpg" alt="Necklace 4">
+    <img src="nek7.jpg" alt="">
     <p class="price">₹2650</p>
     <button onclick="addToCart('Necklace 4',2650,'nek7.jpg')">Add to Cart</button>
   </div>
 
   <div class="gallery">
-    <img src="nek10.jpg" alt="Necklace 5">
+    <img src="nek10.jpg" alt="">
     <p class="price">₹3550</p>
     <button onclick="addToCart('Necklace 5',3550,'nek10.jpg')">Add to Cart</button>
   </div>
 
   <div class="gallery">
-    <img src="nek9.jpg" alt="Necklace 6">
+    <img src="nek9.jpg" alt="">
     <p class="price">₹3650</p>
     <button onclick="addToCart('Necklace 6',3650,'nek9.jpg')">Add to Cart</button>
   </div>
 
-  <div class="gallery">
-    <img src="nekk.jpg" alt="Necklace 7">
-    <p class="price">₹2650</p>
-    <button onclick="addToCart('Necklace 7',2650,'nekk.jpg')">Add to Cart</button>
-  </div>
-
-  <div class="gallery">
-    <img src="nek16.jpg" alt="Necklace 8">
-    <p class="price">₹2250</p>
-    <button onclick="addToCart('Necklace 8',2250,'nek16.jpg')">Add to Cart</button>
-  </div>
-
-  <div class="gallery">
-    <img src="nekk1.jpg" alt="Necklace 9">
-    <p class="price">₹2350</p>
-    <button onclick="addToCart('Necklace 9',2350,'nekk1.jpg')">Add to Cart</button>
-  </div>
-
-  <div class="gallery">
-    <img src="nekk2.jpg" alt="Necklace 10">
-    <p class="price">₹1350</p>
-    <button onclick="addToCart('Necklace 10',1350,'nekk2.jpg')">Add to Cart</button>
-  </div>
-
-  <div class="gallery">
-    <img src="nekk3.jpg" alt="Necklace 11">
-    <p class="price">₹1450</p>
-    <button onclick="addToCart('Necklace 11',1450,'nekk3.jpg')">Add to Cart</button>
-  </div>
-
-  <div class="gallery">
-    <img src="nek12.jpg" alt="Necklace 12">
-    <p class="price">₹2550</p>
-    <button onclick="addToCart('Necklace 12',2550,'nek12.jpg')">Add to Cart</button>
-  </div>
-
 </div>
 
-<!-- CART SCRIPT -->
+<!-- SCRIPT -->
 <script>
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  function addToCart(name, price, image) {
-    cart.push({ name, price, image });
+  function addToCart(name, price, img) {
+    cart.push({ name, price, image: img });
     localStorage.setItem("cart", JSON.stringify(cart));
     alert(name + " added to cart!");
   }
